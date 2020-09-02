@@ -47,8 +47,10 @@ body {
 }
 
 .text-box {
+  position: absolute;
   top: 40%;
   left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .heading-primary {
@@ -58,7 +60,7 @@ body {
 .heading-primary-main {
   display: block;
   font-weight: 400;
-  font-size: 62px;
+  font-size: 60px;
   letter-spacing: 35px;
 }
 
@@ -66,5 +68,5 @@ body {
   display: block;
   font-weight: 700;
   font-size: 20px;
-  letter-spacing: 17.4px;
+  letter-spacing: 17.3px;
 }
