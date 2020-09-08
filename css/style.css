@@ -36,21 +36,21 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 40px;
   left: 40px;
 }
 
-.logo {
+.header__logo {
   height: 35px;
 }
 
-.logo:hover {
+.header__logo:hover {
   animation: rot 1s ease-in-out;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -65,7 +65,7 @@ body {
   backface-visibility: hidden;
   margin-bottom: 60px;
 }
-.heading-primary-main {
+.heading-primary--main {
   display: block;
   font-weight: 400;
   font-size: 60px;
@@ -75,7 +75,7 @@ body {
   animation-timing-function: ease-out;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
   font-weight: 700;
   font-size: 20px;
@@ -91,9 +91,10 @@ body {
   display: inline-block;
   border-radius: 100px;
   transform: all 0.2s;
+  position: relative;
 }
 
-.btn-white {
+.btn--white {
   background-color: #fff;
   color: #777;
 }
@@ -123,6 +124,27 @@ body {
   }
 }
 
+.btn::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  border-radius: 100px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn--white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.5) scaleY(1.6);
+  opacity: 0;
+}
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -156,4 +178,21 @@ body {
     opacity: 1;
     transform: rotate(0deg);
   }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.btn--animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
 }

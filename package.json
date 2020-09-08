@@ -1,0 +1,23 @@
+{
+  "name": "univtrips",
+  "version": "1.0.0",
+  "description": "Landing page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reethikprasad/UnivTrips.git"
+  },
+  "author": "reethik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reethikprasad/UnivTrips/issues"
+  },
+  "homepage": "https://github.com/reethikprasad/UnivTrips#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  },
+  "dependencies": {}
+}
